@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виртуальные туры | Музей "Сквозь года"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marzipano@0.10.2/dist/marzipano.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-vr-cardboard"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://ganeevamirhosting-dev.github.io/School-museum-179/" class="back-link">
+                        <i class="fas fa-arrow-left"></i> Назад в музей
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="panorama-main">
+        <!-- Навигация по панорамам -->
+        <nav class="panorama-nav">
+            <div class="nav-container">
+                <h2>Выберите экспозицию:</h2>
+                <div class="panorama-buttons">
+                    <button class="panorama-btn active" data-panorama="exhibit1">
+                        <i class="fas fa-landmark"></i>
+                        <span>КАЗАНЬ – ГОРОД ТРУДОВОЙ ДОБЛЕСТИ || ТЫЛ ФРОНТУ!</span>
+                    </button>
+                    <button class="panorama-btn" data-panorama="exhibit2">
+                        <i class="fas fa-fort-awesome"></i>
+                        <span>БЛОКАДНЫЙ ЛЕНИНГРАД</span>
+                    </button>
+                    <button class="panorama-btn" data-panorama="exhibit3">
+                        <i class="fas fa-city"></i>
+                        <span>СТАЛИНГРАДСКАЯ БИТВА</span>
+                    </button>
+                    <button class="panorama-btn" data-panorama="exhibit4">
+                        <i class="fas fa-ambulance"></i>
+                        <span>ОСВОБОЖДЕНИЕ ЕВРОПЫ || ПОБЕДА || ПАМЯТЬ</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Контейнер для панорамы -->
+        <section class="panorama-section">
+            <div class="panorama-info">
+                <h1 id="panorama-title">НАКАНУНЕ ВОЙНЫ</h1>
+            </div>
+            
+            <div id="panorama-container" class="panorama-container">
+                <div class="loading-spinner">
+                    <i class="fas fa-sync fa-spin"></i>
+                    <p>Загрузка панорамы...</p>
+                </div>
+            </div>
+
+            <!-- Элементы управления панорамой -->
+            <div class="panorama-controls">
+                <div class="control-group">
+                    <button id="zoom-in" class="control-btn" title="Приблизить">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                    <button id="zoom-out" class="control-btn" title="Отдалить">
+                        <i class="fas fa-search-minus"></i>
+                    </button>
+                </div>
+                <div class="control-group">
+                    <button id="fullscreen-btn" class="control-btn" title="Полный экран">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Инструкция -->
+        <section class="instructions">
+            <div class="instructions-container">
+                <h3>Как управлять панорамой:</h3>
+                <div class="instruction-items">
+                    <div class="instruction-item">
+                        <i class="fas fa-mouse"></i>
+                        <span>Перетаскивайте мышью для осмотра</span>
+                    </div>
+                    <div class="instruction-item">
+                        <i class="fas fa-mouse-pointer"></i>
+                        <span>Колесико мыши для приближения</span>
+                    </div>
+                    <div class="instruction-item">
+                        <i class="fas fa-arrows-alt"></i>
+                        <span>Кнопки управления справа</span>
+                    </div>
+                    <div class="instruction-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>На телефоне: двигайте пальцем</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Виртуальный музей гимназии №179. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="panorama.js"></script>
+</body>
+</html>
